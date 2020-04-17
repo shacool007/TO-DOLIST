@@ -1,6 +1,6 @@
 const User = require('../models/user');
 module.exports.profile  = function(req,res){
-    res.render('home',{title:"users"})                          
+    res.render('profile',{title:"users"})                          
 }
 
 module.exports.signUp = function(req,res){
@@ -13,6 +13,11 @@ module.exports.signIn = function(req,res){
     res.render('sign-in',{
         title:"Codeial/Sign in"
     })
+}
+
+module.exports.signOut = function(req,res){
+    req.logout();   
+    res.redirect('/users/sign-in');
 }
 
 //get the sign up data
@@ -42,6 +47,6 @@ module.exports.create = function(req,res){
 }
 
 module.exports.createSession = function(req,res){
-    // res.render('sign-in')
+    return res.redirect('/');
 }
 
