@@ -1,21 +1,28 @@
-<h1>Header</h1>
-<%if(locals.user){%>
-    <ul>
-        <li>
-            <a href="/users/profile"><%=user.name%></a>
-        </li>
-        <li>
-            <a href="/users/sign-out">Sign Out</a>
-        </li>
-    </ul>
-    <%}else{%>
-        <ul>
-            <li>
-                <a href="/users/sign-in">Sign In</a>
-            </li>
-            <li>
-                <a href="/users/sign-up">Sign Up</a>
-            </li>
-        </ul>
+<nav id="navbar">
+    <h1>Codeial</h1>
 
-<%}%>
+    <ul>
+       
+        
+        <%if(locals.user){%>
+    
+            <li>
+                <a href="/users/profile"><%=user.name%></a>
+            </li>
+            <li>
+                <a href="/users/sign-out">Sign Out</a>
+            </li>
+        <%}else{%>
+                <li>
+                    <a href="/users/sign-in">Sign In</a>
+                </li>
+                <li>
+                    <a href="/users/sign-up">Sign Up</a>
+                </li>
+    
+    <%}%>
+    </ul>
+    
+</nav>
+
+
