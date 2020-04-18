@@ -1,2 +1,13 @@
 
 <h1>Home</h1>
+
+<%if(locals.user){%>
+    <section id="feed-post">
+        <h4>Post</h4>
+        <form action="/posts/create" method="POST">
+            <textarea name="post" id="post-content" cols="30" rows="4"></textarea>
+            <input type="submit" value="POST">
+        </form>
+    </section>
+<%}%>
+<%- include('_post')%>

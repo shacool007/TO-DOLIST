@@ -1,0 +1,11 @@
+<div class="post-container">
+    <%for(post of posts){%>
+    <div class="post">
+        <%=post.content%>
+        <p>
+            <small><%=post.user.name%></small>
+        </p>
+        
+    </div>
+    <%}%>
+</div>
