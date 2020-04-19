@@ -50,8 +50,8 @@ passport.checkAuthentication = function(req,res,next){
 }
 
 passport.checkReAuth = function(req,res,next){
-    if(req.isAuthenticated()){
-        return res.redirect('back');
+    if(req.isAuthenticated()){  
+        return res.redirect('back');    
     }
     return next();
 }
